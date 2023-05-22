@@ -5,7 +5,7 @@ services:
     image: index.docker.io/itsthejb/ispconfig:latest
     container_name: ispconfig
     hostname: ispconfig
-    domainname: test.com
+    domainname: test.makitiplus.com
     cap_add: [
       SYS_ADMIN, LINUX_IMMUTABLE,
       # Pure-ftpd-mysql
@@ -15,8 +15,8 @@ services:
       - LANGUAGE=C
       - LANG=C.UTF-8
       - LC_ALL=C.UTF-8
-      - HOSTNAME=myhost.test.com            # see ./build/autoinstall.ini
-      - HOSTNAME_EMAIL=mail.myhost.test.com # Hostname for email
+      - HOSTNAME=test.makitiplus.com            # see ./build/autoinstall.ini
+      - HOSTNAME_EMAIL=test-1.makitiplus.com # Hostname for email
       - DISABLED_SERVICES=rspamd unbound # disable services (apache2 clamav-daemon cron dovecot fail2ban mariadb postfix postfix pure-ftpd-mysql redis rspamd rsyslog spamassassin ssh unbound)
       # - REDIS_HOST=localhost
       # - POSTGREY_DELAY=300
